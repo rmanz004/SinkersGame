@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WASDMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 10;
 
     public Rigidbody2D Rb;
 
