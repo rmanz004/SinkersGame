@@ -262,11 +262,11 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="websocket-sharp">
-        <HintPath>C:/Users/NickC.CALTRUSS/Documents/GitHub/SinkersGame/Sinker/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
-    </Reference>
     <Reference Include="Photon3Unity3D">
         <HintPath>C:/Users/NickC.CALTRUSS/Documents/GitHub/SinkersGame/Sinker/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+        <HintPath>C:/Users/NickC.CALTRUSS/Documents/GitHub/SinkersGame/Sinker/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
