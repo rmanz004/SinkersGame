@@ -235,3 +235,4 @@ Received Import Request.
 Start importing Assets/Prefab/Obstacle.prefab using Guid(07a7619dc45732441870c459642dcea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '067975fe36741dfa58593252306dbae2') in 0.015484 seconds
   Import took 0.019766 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
