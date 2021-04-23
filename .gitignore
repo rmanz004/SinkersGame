@@ -5,3 +5,4 @@ Sinker/Library/ArtifactDB
 Sinker/Library/SourceAssetDB
 Sinker/Logs/shadercompiler-UnityShaderCompiler.exe0.log
 *.log
+Sinker/Logs/AssetImportWorker0.log
