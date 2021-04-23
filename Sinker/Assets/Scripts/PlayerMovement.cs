@@ -36,9 +36,10 @@ public class PlayerMovement : MonoBehaviour
         {
             moving = false;
         }
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-        Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * 180f;
-        rb.rotation = angle;
+
+        rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
+        // Vector2 lookDir = mousePos - rb.position;
+        // float angle = Mathf.Atan2(lookDir.y, lookDir.x) * 180f;
+        // rb.rotation = angle;
     }
 }
