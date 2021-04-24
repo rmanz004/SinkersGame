@@ -11,6 +11,12 @@ public class SceneChanger : MonoBehaviour
 	[SerializeField] private GameObject MainPage;
 	[SerializeField] private GameObject RulesPage;
 
+	void Start()
+    {
+        MainPage.SetActive(true);
+		RulesPage.SetActive(false);
+    }
+
 	public void ShowRules() {
 		MainPage.SetActive(false);
 		RulesPage.SetActive(true);
