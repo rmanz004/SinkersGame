@@ -269,3 +269,13 @@ candidates check time : 23ms
 >>>>>>> Alexander
 console write time    : 0ms
 
+[api-updater (non-obsolete-error-filter)] 4/24/2021 5:17:46 PM : Starting C:/Program Files/Unity/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 545.5448ms
+moved types parse time: 62ms
+candidates parse time : 1ms
+C# parse time         : 327ms
+candidates check time : 34ms
+console write time    : 0ms
+
