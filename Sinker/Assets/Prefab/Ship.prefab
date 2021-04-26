@@ -137,7 +137,7 @@ MonoBehaviour:
   initAmmo: 3
   maxHealth: 3
   maxAmmo: 3
-  HUD: {fileID: 0}
+  HUD: {fileID: 5685806120609153012, guid: 1170724293a5d1343842e272f51dda27, type: 3}
 --- !u!114 &9119091235020411763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,5 +151,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  HUD: {fileID: 0}
+  bulletPrefab: {fileID: 596373517920953303, guid: 24a42aac6b0411b4fa918c7bb1897839, type: 3}
+  HA: {fileID: 4287155318506868020}

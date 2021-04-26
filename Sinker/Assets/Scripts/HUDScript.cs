@@ -56,6 +56,7 @@ public class HUDScript : MonoBehaviour
         }
         else
         {
+            Debug.Log("In HUD ammo function");
             if (num == 0)
             {
                 ammo1.enabled = false;

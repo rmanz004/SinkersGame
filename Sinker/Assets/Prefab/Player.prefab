@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2450307741389727350}
   - component: {fileID: 2450307741389727345}
   - component: {fileID: 2431012410917358777}
+  - component: {fileID: -3571017347304535490}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -138,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2450307742611240498}
   bulletPrefab: {fileID: 596373517920953303, guid: 24a42aac6b0411b4fa918c7bb1897839, type: 3}
-  HUD: {fileID: 5685806120609153012, guid: 1170724293a5d1343842e272f51dda27, type: 3}
+  HA: {fileID: -3571017347304535490}
 --- !u!61 &2450307741389727345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -179,6 +180,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   Rb: {fileID: 2450307741389727348}
+--- !u!114 &-3571017347304535490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450307741389727344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098170c43032d974189912b3e37f913c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initHealth: 3
+  initAmmo: 3
+  maxHealth: 3
+  maxAmmo: 3
+  HUD: {fileID: 5685806120609153012, guid: 1170724293a5d1343842e272f51dda27, type: 3}
 --- !u!1 &2450307742611240509
 GameObject:
   m_ObjectHideFlags: 0
