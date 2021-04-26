@@ -137,7 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2450307742611240498}
-  bullerPrefab: {fileID: 596373517920953303, guid: 24a42aac6b0411b4fa918c7bb1897839, type: 3}
+  bulletPrefab: {fileID: 596373517920953303, guid: 24a42aac6b0411b4fa918c7bb1897839, type: 3}
+  HUD: {fileID: 5685806120609153012, guid: 1170724293a5d1343842e272f51dda27, type: 3}
 --- !u!61 &2450307741389727345
 BoxCollider2D:
   m_ObjectHideFlags: 0
