@@ -11,8 +11,14 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.right * speed;
     }
 
-    void OnTriggerEnter2D(Collider2D hitInfo){
-                
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "Player")
+        {
+            HealthAndAmmo temp;
+            temp = col.gameObject.GetComponent<HealthAndAmmo>();
+            temp.decHealth(1);
+        }
         Destroy(gameObject);
     }
 
