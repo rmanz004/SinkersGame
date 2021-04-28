@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Boundaries.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
     <Compile Include="Assets\CharacterController2D.cs" />
+    <Compile Include="Assets\Scripts\MenuController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
