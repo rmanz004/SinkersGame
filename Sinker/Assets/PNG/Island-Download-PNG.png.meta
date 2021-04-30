@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 906f5ffd47655d24f962bdda6f0b2a89
+=======
+guid: 727e1a1be51da0a49adc3b9a84eb861d
+>>>>>>> Richard
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

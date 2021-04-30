@@ -1,5 +1,6 @@
 
 Sinker/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+<<<<<<< HEAD
 Sinker/Temp/UnityLockfile
 Sinker/Library/ArtifactDB
 Sinker/Library/SourceAssetDB
@@ -402,3 +403,5 @@ Sinker/Temp/UnityTempFile-df384d69727dc034c9d3fdbab0f91fb6
 Sinker/Temp/UnityTempFile-e808926f04e6c5e4f859f7f94fa13bc3
 Sinker/Temp/UnityTempFile-fef5e59bcfa85054893e0249ffb8a697
 Sinker/Temp/workerlic
+=======
+>>>>>>> Richard

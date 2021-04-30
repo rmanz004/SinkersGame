@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2d7b37eac5499e74d921c6a4f1fb36d6
+=======
+<<<<<<< Updated upstream
+guid: bca1e2272e3ebdd45a5b2221f7964a22
+=======
+guid: b9a4dbcd9c06e1847a9ac6c2e9358b43
+>>>>>>> Stashed changes
+>>>>>>> Richard
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
