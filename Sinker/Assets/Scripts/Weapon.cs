@@ -20,11 +20,11 @@ public class Weapon : MonoBehaviour
     }
 
     void Shoot(){
-        Quaternion rotation = (Input.mousePosition.x - 550 < rb.position.x) ? Quaternion.AngleAxis(transform.eulerAngles.z + 180, transform.forward): firePoint.rotation ;
-        int positionAdjust = (Input.mousePosition.x - 550 < rb.position.x) ? -10 : 0;
-        Vector3 posAdj = new Vector3(positionAdjust,0,0);
-        Instantiate(bullerPrefab, firePoint.position + posAdj, rotation);
-        //Instantiate(bullerPrefab, firePoint.position, firePoint.rotation);
+        // Quaternion rotation = (Input.mousePosition.x - 550 < rb.position.x) ? Quaternion.AngleAxis(transform.eulerAngles.z + 180, transform.forward): firePoint.rotation ;
+        // int positionAdjust = (Input.mousePosition.x - 550 < rb.position.x) ? -10 : 0;
+        // Vector3 posAdj = new Vector3(positionAdjust,0,0);
+        // Instantiate(bullerPrefab, firePoint.position + posAdj, rotation);
+        Instantiate(bullerPrefab, firePoint.position, firePoint.rotation);
         //Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
