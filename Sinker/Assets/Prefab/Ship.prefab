@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3929782052009429687}
   - component: {fileID: 3929782052009429642}
   - component: {fileID: 4287155318506868020}
+  - component: {fileID: 9119091235020411763}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: Ship
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,4 +137,19 @@ MonoBehaviour:
   initAmmo: 3
   maxHealth: 3
   maxAmmo: 3
-  HUD: {fileID: 5574385623515273926, guid: 1170724293a5d1343842e272f51dda27, type: 3}
+  HUD: {fileID: 5685806120609153012, guid: 1170724293a5d1343842e272f51dda27, type: 3}
+--- !u!114 &9119091235020411763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3929782052009429686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c36ab35cd41de41baa2ef46546ec5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 596373517920953303, guid: 24a42aac6b0411b4fa918c7bb1897839, type: 3}
+  HA: {fileID: 4287155318506868020}
