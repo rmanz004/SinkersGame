@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2663803074426203389}
   m_Layer: 0
   m_Name: Cannonball
-  m_TagString: Respawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6245f50fb77b2f246bce5d9aa5871d93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93a8bb2b693ab4d4ba820c0f6b0fe7e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 596373517920953303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8538e664699f16645af4439f371813c2, type: 3}
+  m_Script: {fileID: 11500000, guid: cd1199e818163c14885e24ad8d145bce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20

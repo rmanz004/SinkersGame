@@ -1,19 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: bd7fe475aaf11c94898aabf9e8770a4c
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
-=======
-<<<<<<< Updated upstream
-guid: ed18d2be4ce219a49a4c3ab1d28589c5
-=======
-guid: daaf7fbf79e522142b3681651ca6f056
->>>>>>> Stashed changes
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
->>>>>>> Richard
   userData: 
   assetBundleName: 
   assetBundleVariant: 

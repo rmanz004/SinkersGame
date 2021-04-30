@@ -35,7 +35,7 @@ public class Player : Photon.MonoBehaviour
     }
 
     private void Update(){
-        if(photonView.isMine)
+        //if(photonView.isMine)
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
@@ -53,28 +53,29 @@ public class Player : Photon.MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (moving && (Vector2)transform.position != lastClickedPosition)
-        {
-            float step = MoveSpeed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, lastClickedPosition, step);
-        }
-        else
-        {
-            moving = false;
-        }
+        // if (moving && (Vector2)transform.position != lastClickedPosition)
+        // {
+        //     float step = MoveSpeed * Time.deltaTime;
+        //     transform.position = Vector2.MoveTowards(transform.position, lastClickedPosition, step);
+        // }
+        // else
+        // {
+        //     moving = false;
+        // }
+        rb.MovePosition(rb.position + movement * MoveSpeed * Time.fixedDeltaTime);
     }
 
     private void CheckInput(){
-        if (moving && (Vector2)transform.position != lastClickedPosition)
-        {
-            float step = MoveSpeed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, lastClickedPosition, step);
-        }
-        else
-        {
-            moving = false;
-        }
-        rb.MovePosition(rb.position + movement * MoveSpeed * Time.deltaTime);
+        // if (moving && (Vector2)transform.position != lastClickedPosition)
+        // {
+        //     float step = MoveSpeed * Time.deltaTime;
+        //     transform.position = Vector2.MoveTowards(transform.position, lastClickedPosition, step);
+        // }
+        // else
+        // {
+        //     moving = false;
+        // }
+        // rb.MovePosition(rb.position + movement * MoveSpeed * Time.deltaTime);
     }
     void Shoot()
     {        
