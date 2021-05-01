@@ -51,7 +51,7 @@ public class MenuController : MonoBehaviour
     }
 
     private void OnJoinedRoom(){
-        PhotonNetwork.LoadLevel("GameScene");
+        PhotonNetwork.LoadLevel("1Map");
     }
 
 }
