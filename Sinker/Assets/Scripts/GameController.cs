@@ -5,9 +5,16 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public GameObject PlayerPrefab;
-    public GameObject GameCanvas;
-
-    public void SpawnPlayer(){
-        PhotonNetwork.Instantiate(PlayerPrefab.name, new Vector2(this.transform.position.x, this.transform.position.y),Quaternion.identity,0);
+    bool loaded = false;
+    public void SpawnPlayer()
+    {        
+        loaded = true;
+        PhotonNetwork.Instantiate(PlayerPrefab.name, new Vector2(100,400), Quaternion.identity, 0);
+    }
+    
+    private void OnGUI()
+    {
+        Rect rec = new Rect(0, 0, 300, 100);
+        GUI.Box(rec, Input.mousePosition.x + "/" + Input.mousePosition.y + " ?:" + loaded.ToString());
     }
 }
