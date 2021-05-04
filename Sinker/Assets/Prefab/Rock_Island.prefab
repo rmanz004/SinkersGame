@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b1d74d671ad7a9047bb37310c22d36ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 360b60de6f9ccba428df480fff173e7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -202,6 +202,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 360b60de6f9ccba428df480fff173e7a, type: 3}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6871604174340984750, guid: 78f6c664661276d489b531825badef52, type: 3}
       propertyPath: m_Name
       value: Rock Obstacle (4)
@@ -267,6 +275,14 @@ PrefabInstance:
     - target: {fileID: 6871604174340984748, guid: 78f6c664661276d489b531825badef52, type: 3}
       propertyPath: m_BodyType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 360b60de6f9ccba428df480fff173e7a, type: 3}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6871604174340984750, guid: 78f6c664661276d489b531825badef52, type: 3}
       propertyPath: m_Name
@@ -341,6 +357,14 @@ PrefabInstance:
     - target: {fileID: 6871604174340984748, guid: 78f6c664661276d489b531825badef52, type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 360b60de6f9ccba428df480fff173e7a, type: 3}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6871604174340984750, guid: 78f6c664661276d489b531825badef52, type: 3}
       propertyPath: m_Name
@@ -424,6 +448,14 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 360b60de6f9ccba428df480fff173e7a, type: 3}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6871604174340984750, guid: 78f6c664661276d489b531825badef52, type: 3}
       propertyPath: m_Name
       value: Rock Obstacle (3)
@@ -498,6 +530,14 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 360b60de6f9ccba428df480fff173e7a, type: 3}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6871604174340984750, guid: 78f6c664661276d489b531825badef52, type: 3}
       propertyPath: m_Name
       value: Rock Obstacle (2)
@@ -567,6 +607,14 @@ PrefabInstance:
     - target: {fileID: 6871604174340984746, guid: 78f6c664661276d489b531825badef52, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 360b60de6f9ccba428df480fff173e7a, type: 3}
+    - target: {fileID: 6871604174340984749, guid: 78f6c664661276d489b531825badef52, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6871604174340984750, guid: 78f6c664661276d489b531825badef52, type: 3}
       propertyPath: m_Name
