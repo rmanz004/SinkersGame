@@ -15,6 +15,6 @@ public class GameController : MonoBehaviour
     private void OnGUI()
     {
         Rect rec = new Rect(0, 0, 300, 100);
-        GUI.Box(rec, Input.mousePosition.x + "/" + Input.mousePosition.y + " ?:" + loaded.ToString());
+        GUI.Box(rec, Input.mousePosition.x + "/" + Input.mousePosition.y + " ?:" + loaded.ToString()+ "\n" + PlayerPrefab.name);
     }
 }
