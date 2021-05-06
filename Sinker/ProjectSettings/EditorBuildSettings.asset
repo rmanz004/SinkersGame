@@ -90,4 +90,7 @@ EditorBuildSettings:
     path: Assets/Photon Unity Networking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
       for 4.unity
     guid: e7a7f9734636d415ca84ef3aaf7680f6
+  - enabled: 1
+    path: Assets/Scenes/NewLobby.unity
+    guid: 9b69b2b920729b7418ad1225907af8e7
   m_configObjects: {}

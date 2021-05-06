@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270508e9e047fde41bb6103139cea0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 5000
   rb: {fileID: 8108359885449518728}
   cam: {fileID: 0}
 --- !u!114 &8108359885449518730
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5525e701122ae034cae1b1d4c824f13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 200
   Rb: {fileID: 8108359885449518728}
 --- !u!114 &8108359885449518732
 MonoBehaviour:
