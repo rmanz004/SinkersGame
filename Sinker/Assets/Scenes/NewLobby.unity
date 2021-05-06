@@ -988,7 +988,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 435914517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1570063910}
+        m_TargetAssemblyTypeName: PlayerLayoutGroup, Assembly-CSharp
+        m_MethodName: OnClick_LeaveRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &435914517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,6 +1102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486100171}
   - component: {fileID: 486100172}
+  - component: {fileID: 486100173}
   m_Layer: 0
   m_Name: PlayerNetwork
   m_TagString: Untagged
@@ -1123,6 +1136,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f2551a3c12a2e418a2d119a0009d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &486100173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486100170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 999
+  instantiationId: 999
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &582160359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,7 +1692,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1015677845}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1570063910}
+        m_TargetAssemblyTypeName: PlayerLayoutGroup, Assembly-CSharp
+        m_MethodName: OnClickRoomState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1015677845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2297,7 +2349,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1636652741}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1171372959}
+        m_TargetAssemblyTypeName: CurrentRoomCanvas, Assembly-CSharp
+        m_MethodName: OnClick_StartDelayed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1636652741
 MonoBehaviour:
   m_ObjectHideFlags: 0

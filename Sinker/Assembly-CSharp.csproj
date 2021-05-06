@@ -41,10 +41,13 @@
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoHub\HubGui.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\PunBasics-Tutorial\Scripts\PlayerUI.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoBoxes\ColorPerPlayer.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\PlayerListing.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoWorker\Scripts\WorkerMenu.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\AudioRpc.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PingCloudRegions.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\CurrentRoomCanvas.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoWorker\Scripts\Game\Player\ThirdPersonNetwork.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\PlayerNetwork.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\ManualPhotonViewAllocator.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoRockPaperScissors\Scripts\RpsCore.cs" />
      <Compile Include="Assets\Scripts\HUDScript.cs" />
@@ -54,6 +57,7 @@
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoPickup\Scripts\OnCollideSwitchTeam.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoChangeOwner\OnClickDisableObj.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\LobbyNetwork.cs" />
      <Compile Include="Assets\PhotonChatApi\ChatClient.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoSynchronization\DragToMove.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\GameLogic.cs" />
@@ -72,6 +76,7 @@
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonClasses.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoChat\NamePickGui.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\LoadbalancingPeer.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\MainCanvasManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\PhotonChatApi\ChatParameterCode.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoChangeOwner\InstantiateCube.cs" />
@@ -91,6 +96,7 @@
      <Compile Include="Assets\Photon Unity Networking\Demos\PunBasics-Tutorial\Scripts\LoaderAnime.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SupportLogger.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\CreateRoom.cs" />
      <Compile Include="Assets\Scripts\HealthAndAmmo.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\PhotonPlayer\PlayerRoomIndexing.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs" />
@@ -119,6 +125,7 @@
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Views\PhotonTransformViewRotationModel.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\FriendInfo.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\NetworkCullingHandler.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\LobbyCanvas.cs" />
      <Compile Include="Assets\Scripts\MainMenu\SceneChanger.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\PointedAtGameObjectInfo.cs" />
@@ -135,6 +142,8 @@
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoSynchronization\CubeInter.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoHub\Scripts\ToDemoHubButton.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\Shared Assets\Scripts\PlayerVariables.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\RoomListing.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\RoomLayoutGroup.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\UI\TextToggleIsOnTransition.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoPickup\Scripts\PickupTriggerForward.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoBoxes\OnClickFlashRpc.cs" />
@@ -179,6 +188,7 @@
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonStatsGui.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoChangeOwner\ShowInfoOfPlayer.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoMecanim\Scripts\DemoMecanimGUI.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\DDOL.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoChangeOwner\MaterialPerOwner.cs" />
      <Compile Include="Assets\PhotonChatApi\ChatPeer.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoHub\MoveCam.cs" />
@@ -193,21 +203,11 @@
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoWorker\Scripts\Game\Player\ThirdPersonCamera.cs" />
      <Compile Include="Assets\Scripts\Powerup.cs" />
      <Compile Include="Assets\Scripts\TimeCounter.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\PlayerLayoutGroup.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\OnStartDelete.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MenuController.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\PunBasics-Tutorial\Scripts\CameraWork.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\Demo2DJumpAndRunWithPhysics\Scripts\Demo2DJumpAndRun.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\RoomLayoutGroup.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\RoomListing.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\LobbyCanvas.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\DDOL.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\PlayerNetwork.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\MainCanvasManager.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\CreateRoom.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\LobbyNetwork.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\PlayerListing.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\PlayerLayoutGroup.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\CurrentRoomCanvas.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Photon Unity Networking\Demos\DemoRockPaperScissors\Assets\OpenSans\Apache License.txt" />

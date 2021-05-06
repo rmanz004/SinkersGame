@@ -8,7 +8,7 @@ public class Powerup : MonoBehaviour
     public HUDScript HUD;
     public HealthAndAmmo increase;
     public WASDMovement speedMod;
-    public PlayerMovement speedMod2;
+    public WASDMovement speedMod2;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,10 +24,10 @@ public class Powerup : MonoBehaviour
         speedMod =  player.GetComponent<WASDMovement>();
         increase = player.GetComponent<HealthAndAmmo>();
         HUD = player.GetComponent<HUDScript>();
-        speedMod2 = player.GetComponent<PlayerMovement>();
+        speedMod2 = player.GetComponent<WASDMovement>();
 
         speedMod.moveSpeed *= 1.3f;
-        speedMod2.speed *= 1.3f;
+        speedMod2.moveSpeed *= 1.3f;
         increase.ammo += 1;
         increase.health += 1;
 
@@ -50,8 +50,6 @@ public class Powerup : MonoBehaviour
         {
             increase.ammo -= 1;
         }
-
-
     }
 
     

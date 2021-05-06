@@ -5,7 +5,6 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject bullerPrefab;
     public Rigidbody2D rb;
     public GameObject bulletPrefab;
     public HealthAndAmmo HA;
@@ -24,7 +23,7 @@ public class Weapon : MonoBehaviour
         // int positionAdjust = (Input.mousePosition.x - 550 < rb.position.x) ? -10 : 0;
         // Vector3 posAdj = new Vector3(positionAdjust,0,0);
         // Instantiate(bullerPrefab, firePoint.position + posAdj, rotation);
-        Instantiate(bullerPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         //Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
