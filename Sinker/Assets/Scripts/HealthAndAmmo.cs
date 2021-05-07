@@ -44,9 +44,10 @@ public class HealthAndAmmo : MonoBehaviour
         {
             return;
         }
-        else if (num > health)
+        else if (num >= health)
         {
             health = 0;
+            Destroy(gameObject);
         }
         else
         {
