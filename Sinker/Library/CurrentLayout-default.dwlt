@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1920
+    x: 0
     y: 43
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 77
+  controlID: 36
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 327
     height: 560
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -223,10 +223,10 @@ MonoBehaviour:
     y: 0
     width: 1520
     height: 947
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 16
+  controlID: 37
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,10 +248,10 @@ MonoBehaviour:
     y: 0
     width: 1520
     height: 560
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 17
+  controlID: 116
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -299,7 +299,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1920
+    x: 0
     y: 633
     width: 1519
     height: 366
@@ -317,36 +317,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefab
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefab
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\NickC.CALTRUSS\Documents\GitHub\Sinkers2\Sinker
+  m_LastProjectPath: D:\CS179N\SinkersGame\Sinker
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 28870000
-    m_LastClickedID: 34600
-    m_ExpandedIDs: 000000002444000026440000284400000e570000f2860000
+    m_SelectedIDs: 5c4a0000
+    m_LastClickedID: 19036
+    m_ExpandedIDs: 000000005c4a00005e4a0000604a0000624a0000644a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PNG
-      m_OriginalName: PNG
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 18140
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000244400002644000028440000
+    m_ExpandedIDs: 000000005c4a00005e4a0000604a0000624a0000644a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000060430000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3440
+    x: 1520
     y: 73
     width: 399
     height: 926
@@ -473,7 +473,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1920
+    x: 0
     y: 73
     width: 326
     height: 539
@@ -483,7 +483,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ca9bffff7c9dffff969dffff329fffff7c9fffff829fffffa0acffffb8acffff50aeffff9aaeffffa0aeffffa6aeffff30b1ffff48b1ffffe0b2ffff2ab3ffff30b3ffff36b3ffffe4b6fffffeb6ffff9ab8ffffe4b8ffffeab8ffff78beffff90beffff2ec0ffff78c0ffff7ec0ffff84c0ffff98c6ffffb0c6ffff4ec8ffff98c8ffff9ec8ffffa4c8ffff6ecaffff86caffff88caffffd0caffffd4caffffd8caffffbecbffffd6cbffff74cdffffbecdffffc4cdffffcacdffffd8ceffffa4cfffffe4cffffffccfffffa4d1ffffa8d1ffffc2d1ffffc8d1ffff92d8ffff7adeffff92deffff32e0ffff7ce0ffff82e0ffff88e0ffff9ee1ffffb6e1ffff56e3ffffa0e3ffffa6e3fffface3ffffbeedffffd6edffff6aefffffb2efffffb6efffff22f0ffffc6f0ffff78f1ffff7ef1ffff84f1ffffd8f5fffff0f5ffff84f7ffffccf7ffffd0f7ffff3cf8ffffe0f8ffff92f9ffff98f9ffff9ef9ffff40fbfffff4ffffff52640000b06400002c6e0000366e0000446e0000626e00006c6e0000227900003a7f0000987f0000da7f0000b4b00000ecb000004cb1000022d4000036d40000
+      m_ExpandedIDs: 22f5ffff3af5ffffcef6ffffd2f6ffffeaf6ffffeef6ffff28f9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -527,7 +527,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2247
+    x: 327
     y: 73
     width: 1191
     height: 539
@@ -732,7 +732,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1920
+    x: 0
     y: 633
     width: 1519
     height: 366
