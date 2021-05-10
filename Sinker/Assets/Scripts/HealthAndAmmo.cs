@@ -19,6 +19,8 @@ public class HealthAndAmmo : MonoBehaviour
     {
         health = initHealth;
         ammo = initAmmo;
+        HUD.Hearts(health);
+        HUD.Ammo(ammo);
     }
 
     public void incHealth(int num)
