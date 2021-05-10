@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8108359885449518732}
   - component: {fileID: 7389907399469058020}
   - component: {fileID: 7465576762113853611}
+  - component: {fileID: -1494284154205788259}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -213,6 +214,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 600
   rb: {fileID: 8108359885449518728}
+--- !u!114 &-1494284154205788259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8108359885449518733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270508e9e047fde41bb6103139cea0d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rb: {fileID: 8108359885449518728}
 --- !u!1 &8108359886383387166
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +265,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8108359885449518773}
     m_Modifications:
+    - target: {fileID: 360130009238107134, guid: 1170724293a5d1343842e272f51dda27, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126627289859208987, guid: 1170724293a5d1343842e272f51dda27, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915112119861777721, guid: 1170724293a5d1343842e272f51dda27, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421247918991787397, guid: 1170724293a5d1343842e272f51dda27, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5574385623515273926, guid: 1170724293a5d1343842e272f51dda27, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -336,6 +367,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5574385623515273946, guid: 1170724293a5d1343842e272f51dda27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778866865720854307, guid: 1170724293a5d1343842e272f51dda27, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068763364779215921, guid: 1170724293a5d1343842e272f51dda27, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
