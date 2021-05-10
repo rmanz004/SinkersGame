@@ -20,6 +20,7 @@ public class HUDScript : MonoBehaviour
         }
         else
         {
+            print("Should be called 3 times");
             if(num == 0)
             {
                 heart1.enabled = false;
@@ -50,12 +51,15 @@ public class HUDScript : MonoBehaviour
 
     public int Ammo(int num)
     {
+        print("Should be called three times");
         if (num < 0 || num > 3)
         {
             return -1;
         }
         else
         {
+            print("Is in else");
+            print(num);
             if (num == 0)
             {
                 ammo1.enabled = false;

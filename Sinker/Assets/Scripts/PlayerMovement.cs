@@ -29,7 +29,7 @@ public class PlayerMovement : Photon.MonoBehaviour
         {
             if (moving && (Vector2)transform.position != lastClickedPosition)
             {
-                float step = speed * Time.deltaTime * 20;
+                float step = speed * Time.deltaTime;
                 transform.position = Vector2.MoveTowards(transform.position, lastClickedPosition, step);
             }
             else
