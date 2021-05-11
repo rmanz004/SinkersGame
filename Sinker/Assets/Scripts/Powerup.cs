@@ -28,28 +28,12 @@ public class Powerup : MonoBehaviour
 
         speedMod.moveSpeed *= 1.3f;
         speedMod2.moveSpeed *= 1.3f;
-        increase.ammo += 1;
-        increase.health += 1;
+        increase.incHealth(1);
+        increase.incAmmo(3);
 
         Destroy(gameObject);
 
-        if (increase.health < 3)
-        {
-            HUD.Hearts(increase.health);
-        }
-        else if (increase.health > 3)
-        {
-            increase.health -= 1;
-        }
-
-        if (increase.ammo < 3)
-        {
-            HUD.Ammo(increase.ammo);
-        }
-        else if (increase.ammo > 3)
-        {
-            increase.ammo -= 1;
-        }
+        
     }
 
     

@@ -20,6 +20,6 @@ public class LobbyNetwork : MonoBehaviour
 
     private void OnJoinedLobby(){
         print("Connected to lobby");
-        MainCanvasManager.Instance.LobbyCanvas.transform.SetAsLastSibling();
+        MainCanvasManager.Instance.UsernameCanvas.transform.SetAsLastSibling();
     }
 }
