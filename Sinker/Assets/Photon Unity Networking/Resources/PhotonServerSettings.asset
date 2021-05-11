@@ -42,8 +42,8 @@ MonoBehaviour:
   - PunRespawn
   - RequestForPickupItems
   - RequestForPickupTimes
-  - TaggedPlayer
+  - RPC_CreatePlayer
   - RPC_LoadedGameScene
   - RPC_LoadGameOthers
-  - RPC_CreatePlayer
+  - TaggedPlayer
   DisableAutoOpenWizard: 1

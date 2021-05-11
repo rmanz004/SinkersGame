@@ -11,14 +11,14 @@ public class PlayerNetwork : MonoBehaviour
         Instance = this;
 
         PhotonView = GetComponent<PhotonView>();
-        PlayerName = "NickC";
+        PlayerName = "RichM";
 
         SceneManager.sceneLoaded += OnSceneFinishedLoading;
     }
 
     private void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "NewMap")
+        if (scene.name == "1Map")
         {
             if (PhotonNetwork.isMasterClient)
             {
@@ -45,7 +45,7 @@ public class PlayerNetwork : MonoBehaviour
     [PunRPC]
     private void RPC_LoadGameOthers()
     {
-        PhotonNetwork.LoadLevel(2);
+        PhotonNetwork.LoadLevel(3);
     }
 
     [PunRPC]

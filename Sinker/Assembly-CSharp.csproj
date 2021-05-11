@@ -77,6 +77,7 @@
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoChat\NamePickGui.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\LoadbalancingPeer.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainCanvasManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerShipSettings.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\PhotonChatApi\ChatParameterCode.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoChangeOwner\InstantiateCube.cs" />
@@ -173,8 +174,9 @@
      <Compile Include="Assets\PhotonChatApi\ChatChannel.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoPickup\Scripts\OnPickedUpScript.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoRockPaperScissors\Scripts\RpsDemoConnect.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Demos\DemoFriendsAndCustomAuth\GUIFriendsInRoom.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\UsernameCanvas.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Views\PhotonTransformViewScaleControl.cs" />
+     <Compile Include="Assets\Photon Unity Networking\Demos\DemoFriendsAndCustomAuth\GUIFriendsInRoom.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoPickup\Scripts\PickupDemoGui.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoChat\ChatGui.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoBoxes\OnDoubleclickDestroy.cs" />
@@ -191,6 +193,7 @@
      <Compile Include="Assets\Scripts\MainMenu\DDOL.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoChangeOwner\MaterialPerOwner.cs" />
      <Compile Include="Assets\PhotonChatApi\ChatPeer.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\CreateUsername.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoHub\MoveCam.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Views\PhotonTransformView.cs" />
@@ -201,7 +204,6 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\PunTurnManager.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\NetworkCharacter.cs" />
      <Compile Include="Assets\Photon Unity Networking\Demos\DemoWorker\Scripts\Game\Player\ThirdPersonCamera.cs" />
-     <Compile Include="Assets\Scripts\Powerup.cs" />
      <Compile Include="Assets\Scripts\TimeCounter.cs" />
      <Compile Include="Assets\Scripts\MainMenu\PlayerLayoutGroup.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\OnStartDelete.cs" />
