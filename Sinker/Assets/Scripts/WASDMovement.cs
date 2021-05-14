@@ -2,28 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WASDMovement : MonoBehaviour
+public class WASDMovement : Photon.MonoBehaviour
 {
     public float moveSpeed = 10;
-
-    public Rigidbody2D Rb;
-
+    public Rigidbody2D rb;
     Vector2 movement;
-    // Start is called before the first frame update
-    void Start()
+    PhotonView PhotonView;
+
+    private void Awake()
     {
-
+        PhotonView = GetComponent<PhotonView>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        CheckInput();
     }
 
-    void FixedUpdate()
+    private void CheckInput()
     {
-        Rb.MovePosition(Rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if (PhotonView.isMine)
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
+        }
     }
 }

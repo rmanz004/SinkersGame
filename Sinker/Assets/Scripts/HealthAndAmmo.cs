@@ -9,8 +9,8 @@ public class HealthAndAmmo : MonoBehaviour
     public int initAmmo = 3;
     public int maxHealth = 3;
     public int maxAmmo = 3;
-    int health;
-    int ammo;
+    public int health;
+    public int ammo;
 
     public HUDScript HUD;
 
@@ -44,9 +44,10 @@ public class HealthAndAmmo : MonoBehaviour
         {
             return;
         }
-        else if (num > health)
+        else if (num >= health)
         {
             health = 0;
+            Destroy(gameObject);
         }
         else
         {
@@ -69,11 +70,12 @@ public class HealthAndAmmo : MonoBehaviour
         {
             ammo += num;
         }
+        HUD.Ammo(ammo);
     }
 
     public int decAmmo(int num)
     {
-        if(num < 0)
+        if (num < 0)
         {
             return 0;
         }
@@ -84,6 +86,7 @@ public class HealthAndAmmo : MonoBehaviour
         else
         {
             ammo -= num;
+            HUD.Ammo(ammo);
             return 0;
         }
     }

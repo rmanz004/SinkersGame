@@ -83,4 +83,14 @@ public class HUDScript : MonoBehaviour
             return 0;
         }
     }
+
+    /*
+    private void FixedUpdate()
+    {
+        Player player = GetType("Player");
+        HealthAndAmmo currVals = player.GetComponent<HealthAndAmmo>();
+        Ammo(currVals.health);
+        Hearts(currVals.ammo);
+    }
+    */
 }
