@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Sinker/Assets/Prefab/Powerup.prefab.meta
 guid: 8a93b7517a422244888fa15c7187a479
+=======
+guid: 8154f109f9f972b4194705d8663f2041
+>>>>>>> steve:Sinker/Assets/Prefab/Player (1).prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

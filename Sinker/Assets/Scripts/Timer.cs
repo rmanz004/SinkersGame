@@ -15,7 +15,7 @@ public class TimeCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeval = 5;
+        timeval = 30;
     }
 
     // Update is called once per frame
