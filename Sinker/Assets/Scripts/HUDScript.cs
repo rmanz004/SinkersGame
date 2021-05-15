@@ -11,7 +11,7 @@ public class HUDScript : MonoBehaviour
     public Image ammo1;
     public Image ammo2;
     public Image ammo3;
-
+    
     public int Hearts(int num)
     {
         if(num < 0 || num > 3)
