@@ -6,12 +6,19 @@ using TMPro;
 
 public class PlayerShipSettings : MonoBehaviour
 {
-
+    private PhotonView photonView;
+    private void Awake()
+    {
+        photonView = GetComponent<PhotonView>();
+    }
     void Start()
     {
-        TextMeshPro tmp = GetComponent<TextMeshPro>();
-        tmp.SetText(PhotonNetwork.playerName);        
+        //if (photonView.isMine)
+        {
+            TextMeshPro tmp = GetComponent<TextMeshPro>();
+            tmp.SetText(PhotonNetwork.playerName);
+        }
     }
 
-    
+
 }

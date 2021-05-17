@@ -31,6 +31,11 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
+        photonView.RPC("RPC_ShootBullet", PhotonTargets.All);
+    }
+    [PunRPC]
+    private void RPC_ShootBullet()
+    {
         Transform fp = firePointLeft;
         float dist1 = Vector3.Distance(Camera.main.ScreenToWorldPoint(Input.mousePosition), firePointLeft.position);
         float dist2 = Vector3.Distance(Camera.main.ScreenToWorldPoint(Input.mousePosition), firePointRight.position);

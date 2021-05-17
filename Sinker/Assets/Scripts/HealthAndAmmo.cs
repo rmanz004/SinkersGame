@@ -13,7 +13,11 @@ public class HealthAndAmmo : MonoBehaviour
     public int ammo;
 
     public HUDScript HUD;
-
+    private PhotonView photonView;
+    private void Awake()
+    {
+        photonView = GetComponent<PhotonView>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +25,11 @@ public class HealthAndAmmo : MonoBehaviour
         ammo = initAmmo;
         HUD.Hearts(health);
         HUD.Ammo(ammo);
+    }
+    [PunRPC]
+    private void RPC_DestroyDeadPlayer()
+    {
+        Destroy(gameObject);
     }
 
     public void incHealth(int num)
@@ -49,7 +58,7 @@ public class HealthAndAmmo : MonoBehaviour
         else if (num >= health)
         {
             health = 0;
-            Destroy(gameObject);
+            photonView.RPC("RPC_DestroyDeadPlayer", PhotonTargets.All);
         }
         else
         {
@@ -81,7 +90,7 @@ public class HealthAndAmmo : MonoBehaviour
         {
             return 0;
         }
-        else if(num > ammo)
+        else if (num > ammo)
         {
             return -1;
         }
@@ -93,5 +102,5 @@ public class HealthAndAmmo : MonoBehaviour
         }
     }
 
-    
+
 }
