@@ -10,8 +10,7 @@ public class PlayerShipSettings : MonoBehaviour
     void Start()
     {
         TextMeshPro tmp = GetComponent<TextMeshPro>();
-        tmp.SetText(PhotonNetwork.playerName);
-        
+        tmp.SetText(PhotonNetwork.playerName);        
     }
 
     

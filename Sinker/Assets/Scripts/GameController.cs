@@ -11,10 +11,4 @@ public class GameController : MonoBehaviour
     //     loaded = true;
     //     //PhotonNetwork.Instantiate(PlayerPrefab.name, new Vector2(100,400), Quaternion.identity, 0);
     // }
-    
-    private void OnGUI()
-    {
-        Rect rec = new Rect(0, 0, 300, 100);
-        GUI.Box(rec, Input.mousePosition.x + "/" + Input.mousePosition.y + " ?:" + loaded.ToString()+ "\n" + PlayerPrefab.name);
-    }
 }
