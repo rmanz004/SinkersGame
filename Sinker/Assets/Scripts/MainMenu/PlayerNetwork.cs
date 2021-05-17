@@ -62,7 +62,7 @@ public class PlayerNetwork : MonoBehaviour
     [PunRPC]
     private void RPC_CreatePlayer()
     {
-        float randomValue = Random.Range(0f, 5f);
-        GameObject b = PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100 + (randomValue *5), 400), Quaternion.identity, 0);        
+        float randomValue = Random.Range(0f, 70f);
+        PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100 + (randomValue *5), 400), Quaternion.identity, 0);        
     }
 }

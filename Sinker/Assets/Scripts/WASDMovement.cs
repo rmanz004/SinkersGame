@@ -7,7 +7,7 @@ public class WASDMovement : Photon.MonoBehaviour
     public float moveSpeed = .4f;
     public Rigidbody2D rb;
     Vector2 movement;
-    PhotonView PhotonView;
+    PhotonView photonView;
 
     private Vector3 targetPosition;
     private bool isMoving = false;
@@ -16,17 +16,20 @@ public class WASDMovement : Photon.MonoBehaviour
 
     private void Awake()
     {
-        PhotonView = GetComponent<PhotonView>();
+        photonView = GetComponent<PhotonView>();
     }
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (photonView.isMine)
         {
-            SetTargetPosition();
-        }
-        else if (isMoving)
-        {
-            Move();
+            if (Input.GetMouseButton(0))
+            {
+                SetTargetPosition();
+            }
+            else if (isMoving)
+            {
+                Move();
+            }
         }
     }
 
