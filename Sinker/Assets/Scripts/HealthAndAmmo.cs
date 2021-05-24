@@ -12,12 +12,15 @@ public class HealthAndAmmo : MonoBehaviour
     public int health;
     public int ammo;
 
+    [SerializeField]
     public HUDScript HUD;
     private PhotonView photonView;
+    
     private void Awake()
     {
         photonView = GetComponent<PhotonView>();
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +28,25 @@ public class HealthAndAmmo : MonoBehaviour
         ammo = initAmmo;
         HUD.Hearts(health);
         HUD.Ammo(ammo);
+
+        if(HUD != null)
+        {
+            HUDScript _uiGo = Instantiate(HUD);
+            _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
+        }
+        else
+        {
+            Debug.Log("Health and Ammo error");
+        }
     }
+    /*
+    void CalledOnLevelWasLoaded()
+    {
+        GameObject _uiGo = Instantiate(this.HUD);
+        _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReciever);
+        return;
+    }
+    */
     [PunRPC]
     private void RPC_DestroyDeadPlayer()
     {

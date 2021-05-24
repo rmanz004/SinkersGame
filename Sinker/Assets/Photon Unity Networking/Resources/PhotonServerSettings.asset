@@ -43,9 +43,9 @@ MonoBehaviour:
   - RequestForPickupItems
   - RequestForPickupTimes
   - RPC_CreatePlayer
+  - RPC_DestroyDeadPlayer
   - RPC_LoadedGameScene
   - RPC_LoadGameOthers
-  - TaggedPlayer
   - RPC_ShootBullet
-  - RPC_DestroyDeadPlayer
+  - TaggedPlayer
   DisableAutoOpenWizard: 1

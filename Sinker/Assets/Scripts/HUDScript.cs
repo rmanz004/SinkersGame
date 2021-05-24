@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class HUDScript : MonoBehaviour
 {
+    #region Private Fields
+    private HealthAndAmmo target;
+    #endregion
+
+    #region MonoBehaviour Callbacks
     public Image heart1;
     public Image heart2;
     public Image heart3;
@@ -12,6 +17,13 @@ public class HUDScript : MonoBehaviour
     public Image ammo2;
     public Image ammo3;
     
+    /*
+    void Awake()
+    {
+        this.transform.SetParent(GameObject.Find("Canvas").GetComponent<Transform>(), false);
+    }
+    */
+
     public int Hearts(int num)
     {
         if(num < 0 || num > 3)
@@ -83,14 +95,17 @@ public class HUDScript : MonoBehaviour
             return 0;
         }
     }
+    #endregion
 
-    /*
-    private void FixedUpdate()
+    #region Public Methods
+    public void SetTarget(HealthAndAmmo _target)
     {
-        Player player = GetType("Player");
-        HealthAndAmmo currVals = player.GetComponent<HealthAndAmmo>();
-        Ammo(currVals.health);
-        Hearts(currVals.ammo);
+        if(_target == null)
+        {
+            Debug.LogError("No player target");
+            return;
+        }
+        target = _target;
     }
-    */
+    #endregion
 }
