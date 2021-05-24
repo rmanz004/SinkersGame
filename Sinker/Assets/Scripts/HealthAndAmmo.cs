@@ -29,10 +29,11 @@ public class HealthAndAmmo : MonoBehaviour
         HUD.Hearts(health);
         HUD.Ammo(ammo);
 
-        if(HUD != null)
+        if((HUD != null) && (photonView.isMine))
         {
             HUDScript _uiGo = Instantiate(HUD);
             _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
+            HUD = _uiGo;
         }
         else
         {
@@ -79,6 +80,7 @@ public class HealthAndAmmo : MonoBehaviour
         else if (num >= health)
         {
             health = 0;
+            HUD.Hearts(health);
             photonView.RPC("RPC_DestroyDeadPlayer", PhotonTargets.All);
         }
         else
@@ -122,6 +124,4 @@ public class HealthAndAmmo : MonoBehaviour
             return 0;
         }
     }
-
-
 }

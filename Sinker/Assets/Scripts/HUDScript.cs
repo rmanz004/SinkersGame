@@ -10,6 +10,7 @@ public class HUDScript : MonoBehaviour
     #endregion
 
     #region MonoBehaviour Callbacks
+    
     public Image heart1;
     public Image heart2;
     public Image heart3;
@@ -17,12 +18,14 @@ public class HUDScript : MonoBehaviour
     public Image ammo2;
     public Image ammo3;
     
-    /*
-    void Awake()
+    void update()
     {
-        this.transform.SetParent(GameObject.Find("Canvas").GetComponent<Transform>(), false);
+        if(target == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
     }
-    */
 
     public int Hearts(int num)
     {
