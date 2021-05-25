@@ -4,21 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PlayerShipSettings : MonoBehaviour
+public class PlayerShipSettings : Photon.MonoBehaviour
 {
-    private PhotonView photonView;
-    private void Awake()
-    {
-        photonView = GetComponent<PhotonView>();
-    }
+
     void Start()
     {
-        //if (photonView.isMine)
-        {
-            TextMeshPro tmp = GetComponent<TextMeshPro>();
-            tmp.SetText(PhotonNetwork.playerName);
-        }
+        string PlayerUserName = this.transform.GetComponent<PhotonView>().owner.NickName;
+        this.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text = PlayerUserName;
     }
+
+
+
 
 
 }
