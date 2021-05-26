@@ -1,17 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class PlayerNetwork : MonoBehaviour
 {
     public static PlayerNetwork Instance;
     public string PlayerName { get; private set; }
+    private GameObject shipPrefabTmp;
     private PhotonView PhotonView;
     private int playersInGame = 0;
+
     private void Awake()
     {
         Instance = this;
 
         PhotonView = GetComponent<PhotonView>();
-        PlayerName = "RichM";
 
         SceneManager.sceneLoaded += OnSceneFinishedLoading;
     }
@@ -63,7 +67,13 @@ public class PlayerNetwork : MonoBehaviour
     private void RPC_CreatePlayer()
     {
         float randomValue = Random.Range(0f, 70f);
-        PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100 + (randomValue *5), 400), Quaternion.identity, 0);
-        print("Player was created");
+        shipPrefabTmp = PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100 + (randomValue * 5), 400), Quaternion.identity, 0);
+
+        /*
+        shipPrefabTmp.transform.GetComponent<PhotonView>().owner.NickName = "";
+        string userName = shipPrefabTmp.transform.GetComponent<PhotonView>().owner.NickName;
+        shipPrefabTmp.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().SetText(userName);
+        */
+ 
     }
 }
