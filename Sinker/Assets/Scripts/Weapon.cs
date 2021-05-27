@@ -10,7 +10,9 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public HealthAndAmmo HA;
     PhotonView photonView;
-    bool right = false;
+    int hasAmmo = 1;
+
+    public int score = 0;
 
     private void Awake()
     {
@@ -21,9 +23,17 @@ public class Weapon : MonoBehaviour
     {
         if (photonView.isMine)
         {
+            // if (Input.GetButtonDown("Fire1"))
+            // {
+            //     if (HA.decAmmo(1) == 0)
+            //         Shoot();
+            // }
             if (Input.GetButtonDown("Fire1"))
             {
-                if (HA.decAmmo(1) == 0)
+                HealthAndAmmo temp;
+                temp = this.gameObject.GetComponent<HealthAndAmmo>();
+                hasAmmo = temp.decAmmo(1);
+                if (hasAmmo == 0)
                     Shoot();
             }
         }
@@ -47,23 +57,19 @@ public class Weapon : MonoBehaviour
         {
             fp = firePointLeft;
         }
-        Instantiate(bulletPrefab, fp.position, fp.rotation);
+        GameObject instance = Instantiate(bulletPrefab, fp.position, fp.rotation);
+        Bullet bullet = instance.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            bullet.cannon = this;
+        }
     }
     private void OnGUI()
     {
-        Rect rec = new Rect(0, 0, 300, 100);
-        GUI.Box(rec, transform.position.x + "<" + Camera.main.ScreenToWorldPoint(Input.mousePosition).x + "\n" + transform.position.y + "<" + Camera.main.ScreenToWorldPoint(Input.mousePosition).y + "\n" + transform.position.z + "<" + Camera.main.ScreenToWorldPoint(Input.mousePosition).z + "\nRight: " + right);
-    }
-
-    private float PointToPlaneDistance(Vector3 pointPosition, Vector3 planePosition, Vector3 planeNormal)
-    {
-        float sb, sn, sd;
-
-        sn = -Vector3.Dot(planeNormal, (pointPosition - planePosition));
-        sd = Vector3.Dot(planeNormal, planeNormal);
-        sb = sn / sd;
-
-        Vector3 result = pointPosition + sb * planeNormal;
-        return Vector3.Distance(pointPosition, result);
+        if (photonView.isMine)
+        {
+            Rect rec = new Rect(0, 0, 300, 100);
+            GUI.Box(rec, score.ToString());
+        }
     }
 }

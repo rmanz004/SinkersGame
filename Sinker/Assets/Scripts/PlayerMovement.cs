@@ -24,27 +24,4 @@ public class PlayerMovement : Photon.MonoBehaviour
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
     }
-    // private void Update()
-    // {
-    //     movement.x = Input.GetAxisRaw("Horizontal");
-    //     movement.y = Input.GetAxisRaw("Vertical");
-    // }
-
-    // private void FixedUpdate()
-    // {
-    //     if (photonView.isMine)
-    //     {
-    //         if (moving && (Vector2)transform.position != lastClickedPosition)
-    //         {
-    //             float step = speed * Time.deltaTime;
-    //             transform.position = Vector2.MoveTowards(transform.position, lastClickedPosition, step);
-    //         }
-    //         else
-    //         {
-    //             moving = false;
-    //         }
-
-    //         rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
-    //     }
-    // }
 }

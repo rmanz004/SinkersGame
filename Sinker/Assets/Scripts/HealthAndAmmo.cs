@@ -12,6 +12,8 @@ public class HealthAndAmmo : MonoBehaviour
     public int health;
     public int ammo;
 
+    public int score;
+
     [SerializeField]
     public HUDScript HUD;
     private PhotonView photonView;

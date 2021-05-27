@@ -44,13 +44,10 @@ public class WASDMovement : Photon.MonoBehaviour
     }
     private void Move()
     {
-        //transform.rotation = Quaternion.LookRotation(Vector3.forward, targetPosition);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, .9f * Time.deltaTime);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-        //transform.Translate(transform.forward*moveSpeed*Time.deltaTime, Space.World);
         if (transform.rotation.AlmostEquals(targetRotation, 20f))
         {
-            //transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
             if (transform.position == targetPosition)
             {
                 isMoving = false;
@@ -58,18 +55,4 @@ public class WASDMovement : Photon.MonoBehaviour
         }
     }
 
-    // void Update()
-    // {
-    //     movement.x = Input.GetAxisRaw("Horizontal");
-    //     movement.y = Input.GetAxisRaw("Vertical");
-    //     CheckInput();
-    // }
-
-    // private void CheckInput()
-    // {
-    //     if (PhotonView.isMine)
-    //     {
-    //         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
-    //     }
-    // }
 }

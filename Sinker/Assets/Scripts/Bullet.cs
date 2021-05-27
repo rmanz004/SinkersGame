@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 700f;
     public Rigidbody2D rb;
+    public Weapon cannon;
     void Start()
     {
         rb.velocity = transform.up * speed;
@@ -13,11 +14,13 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Player")
+        print(col.gameObject.ToString());
+        if (col.gameObject.tag == "Player")
         {
             HealthAndAmmo temp;
             temp = col.gameObject.GetComponent<HealthAndAmmo>();
             temp.decHealth(1);
+            cannon.score += 10;
         }
         Destroy(gameObject);
     }
