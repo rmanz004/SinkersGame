@@ -6,9 +6,22 @@ public class GameController : MonoBehaviour
 {
     public GameObject PlayerPrefab;
     bool loaded = false;
-    // public void SpawnPlayer()
-    // {        
-    //     loaded = true;
-    //     //PhotonNetwork.Instantiate(PlayerPrefab.name, new Vector2(100,400), Quaternion.identity, 0);
-    // }
+    int ogPlayersAlive = 0;
+
+    string namie = "BigTest";
+
+    private void Start()
+    {
+        ogPlayersAlive = ((int)PhotonNetwork.room.CustomProperties["playersAlive"]);
+    }
+
+    private void FixedUpdate()
+    {
+        if ((int)PhotonNetwork.room.CustomProperties["playersAlive"] <= 1)
+        {
+            print("Round over");
+            PhotonNetwork.room.CustomProperties["playersAlive"] = ogPlayersAlive;
+            PhotonNetwork.LoadLevel(2);
+        }
+    }
 }

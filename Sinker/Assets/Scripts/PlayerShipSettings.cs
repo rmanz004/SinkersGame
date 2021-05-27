@@ -13,9 +13,8 @@ public class PlayerShipSettings : Photon.MonoBehaviour
     }
     void Start()
     {
-        string PlayerUserName = this.transform.GetComponent<PhotonView>().owner.NickName;
+        string PlayerUserName = photonView.owner.NickName;
         this.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text = PlayerUserName;
+        print("Name set");
     }
-
-
 }

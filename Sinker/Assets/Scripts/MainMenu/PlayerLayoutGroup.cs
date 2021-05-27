@@ -28,7 +28,7 @@ public class PlayerLayoutGroup : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        
+
         print("Oh my goodness it joined.");
         MainCanvasManager.Instance.CurrentRoomCanvas.transform.SetAsLastSibling();
 
@@ -61,6 +61,7 @@ public class PlayerLayoutGroup : MonoBehaviour
         playerListing.ApplyPhotonPlayer(photonPlayer);
 
         PlayerListings.Add(playerListing);
+        PhotonNetwork.room.CustomProperties["playersAlive"] = ((int)PhotonNetwork.room.CustomProperties["playersAlive"]) + 1;
     }
     private void PlayerLeftRoom(PhotonPlayer photonPlayer)
     {

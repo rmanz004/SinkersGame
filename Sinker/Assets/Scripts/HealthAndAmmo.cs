@@ -17,7 +17,7 @@ public class HealthAndAmmo : MonoBehaviour
     [SerializeField]
     public HUDScript HUD;
     private PhotonView photonView;
-    
+
     private void Awake()
     {
         photonView = GetComponent<PhotonView>();
@@ -31,7 +31,7 @@ public class HealthAndAmmo : MonoBehaviour
         HUD.Hearts(health);
         HUD.Ammo(ammo);
 
-        if((HUD != null) && (photonView.isMine))
+        if ((HUD != null) && (photonView.isMine))
         {
             HUDScript _uiGo = Instantiate(HUD);
             _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
@@ -50,12 +50,6 @@ public class HealthAndAmmo : MonoBehaviour
         return;
     }
     */
-    [PunRPC]
-    private void RPC_DestroyDeadPlayer()
-    {
-        Destroy(gameObject);
-    }
-
     public void incHealth(int num)
     {
         if (num < 0)
@@ -126,4 +120,11 @@ public class HealthAndAmmo : MonoBehaviour
             return 0;
         }
     }
+    [PunRPC]
+    private void RPC_DestroyDeadPlayer()
+    {
+        Destroy(gameObject);
+        PhotonNetwork.room.CustomProperties["playersAlive"] = ((int)PhotonNetwork.room.CustomProperties["playersAlive"]) - 1;
+    }
+
 }

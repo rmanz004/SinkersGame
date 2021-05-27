@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Weapon : MonoBehaviour
 {
@@ -23,11 +24,6 @@ public class Weapon : MonoBehaviour
     {
         if (photonView.isMine)
         {
-            // if (Input.GetButtonDown("Fire1"))
-            // {
-            //     if (HA.decAmmo(1) == 0)
-            //         Shoot();
-            // }
             if (Input.GetButtonDown("Fire1"))
             {
                 HealthAndAmmo temp;
@@ -63,6 +59,13 @@ public class Weapon : MonoBehaviour
         {
             bullet.cannon = this;
         }
+    }
+    [PunRPC]
+    private void RPC_UpdateScore(int score)
+    {
+        print("UpdateScore");
+        string newHeader = this.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text.Split(':')[0] + ": " + score.ToString();
+        this.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text = newHeader;
     }
     private void OnGUI()
     {

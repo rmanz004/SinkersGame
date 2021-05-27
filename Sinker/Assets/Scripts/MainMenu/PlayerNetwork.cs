@@ -6,6 +6,7 @@ public class PlayerNetwork : MonoBehaviour
     public string PlayerName { get; private set; }
     private PhotonView PhotonView;
     private int playersInGame = 0;
+    private int level = 3;
     private void Awake()
     {
         Instance = this;
@@ -19,6 +20,7 @@ public class PlayerNetwork : MonoBehaviour
     {
         if (scene.name == "1Map")
         {
+            level = 3;
             if (PhotonNetwork.isMasterClient)
             {
                 MasterLoadedGame();
@@ -27,6 +29,11 @@ public class PlayerNetwork : MonoBehaviour
             {
                 NonMasterLoadedGame();
             }
+        }
+        if (scene.name == "NewMap")
+        {
+            level = 2;
+             MasterLoadedGame();
         }
     }
 
@@ -44,7 +51,7 @@ public class PlayerNetwork : MonoBehaviour
     [PunRPC]
     private void RPC_LoadGameOthers()
     {
-        PhotonNetwork.LoadLevel(3);
+        PhotonNetwork.LoadLevel(level);
     }
 
     [PunRPC]
@@ -62,7 +69,7 @@ public class PlayerNetwork : MonoBehaviour
     private void RPC_CreatePlayer()
     {
         float randomValue = Random.Range(0f, 70f);
-        PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100 + (randomValue *5), 400), Quaternion.identity, 0);
+        PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100 + (randomValue * 5), 400), Quaternion.identity, 0);
         print("Player was created");
     }
 }

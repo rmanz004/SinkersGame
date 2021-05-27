@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 7465576762113853611}
   - component: {fileID: 4744982992712688815}
   - component: {fileID: 7389907399469058020}
+  - component: {fileID: 15920228408141199}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -374,6 +375,7 @@ MonoBehaviour:
   rb: {fileID: 8108359885449518728}
   bulletPrefab: {fileID: 596373517920953303, guid: 24a42aac6b0411b4fa918c7bb1897839, type: 3}
   HA: {fileID: 8108359885449518732}
+  score: 0
 --- !u!114 &8108359885449518732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,6 +394,7 @@ MonoBehaviour:
   maxAmmo: 100
   health: 0
   ammo: 0
+  score: 0
   HUD: {fileID: 5685806120609153012, guid: 1170724293a5d1343842e272f51dda27, type: 3}
 --- !u!114 &7465576762113853611
 MonoBehaviour:
@@ -442,6 +445,18 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &15920228408141199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8108359885449518733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8f9fb1fc68ebc4b9fb6403d18737d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8108359886383387166
 GameObject:
   m_ObjectHideFlags: 0
