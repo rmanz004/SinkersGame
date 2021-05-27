@@ -11,7 +11,6 @@ public class PlayerNetwork : MonoBehaviour
         Instance = this;
 
         PhotonView = GetComponent<PhotonView>();
-        PlayerName = "RichM";
 
         SceneManager.sceneLoaded += OnSceneFinishedLoading;
     }
