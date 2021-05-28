@@ -47,6 +47,6 @@ MonoBehaviour:
   - RPC_LoadedGameScene
   - RPC_LoadGameOthers
   - RPC_ShootBullet
-  - TaggedPlayer
   - RPC_UpdateScore
+  - TaggedPlayer
   DisableAutoOpenWizard: 1

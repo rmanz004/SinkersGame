@@ -18,6 +18,7 @@ public class PlayerNetwork : MonoBehaviour
 
     private void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
     {
+        print("On scene");
         if (scene.name == "1Map")
         {
             level = 3;
@@ -33,7 +34,17 @@ public class PlayerNetwork : MonoBehaviour
         if (scene.name == "NewMap")
         {
             level = 2;
-             MasterLoadedGame();
+            playersInGame = 0;
+            print("On scene New Map");
+            PhotonNetwork.room.CustomProperties["playersAlive"] = 4;
+            if (PhotonNetwork.isMasterClient)
+            {
+                MasterLoadedGame();
+            }
+            else
+            {
+                NonMasterLoadedGame();
+            }
         }
     }
 
@@ -58,6 +69,7 @@ public class PlayerNetwork : MonoBehaviour
     private void RPC_LoadedGameScene()
     {
         playersInGame++;
+        print(playersInGame);
         if (playersInGame == PhotonNetwork.playerList.Length)
         {
             print("All players active");
