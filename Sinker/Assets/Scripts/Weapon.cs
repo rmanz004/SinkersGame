@@ -67,12 +67,12 @@ public class Weapon : MonoBehaviour
         string newHeader = this.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text.Split(':')[0] + ": " + score.ToString();
         this.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text = newHeader;
     }
-    private void OnGUI()
-    {
-        if (photonView.isMine)
-        {
-            Rect rec = new Rect(0, 0, 300, 100);
-            GUI.Box(rec, score.ToString());
-        }
-    }
+    // private void OnGUI()
+    // {
+    //     if (photonView.isMine)
+    //     {
+    //         Rect rec = new Rect(0, 0, 300, 100);
+    //         GUI.Box(rec, score.ToString());
+    //     }
+    // }
 }

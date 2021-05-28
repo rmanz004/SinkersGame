@@ -7,9 +7,6 @@ public class GameController : MonoBehaviour
     public GameObject PlayerPrefab;
     bool loaded = false;
     int ogPlayersAlive = 0;
-
-    string namie = "BigTest";
-
     private void Start()
     {
         ogPlayersAlive = ((int)PhotonNetwork.room.CustomProperties["playersAlive"]);
@@ -19,7 +16,14 @@ public class GameController : MonoBehaviour
     {
         if ((int)PhotonNetwork.room.CustomProperties["playersAlive"] <= 1)
         {
-            print("Round over");
+            print("Round over: Kills");
+            PhotonNetwork.room.CustomProperties["playersAlive"] = ogPlayersAlive;
+            PhotonNetwork.LoadLevel(2);
+        }
+        if ((bool)PhotonNetwork.room.CustomProperties["timesUp"])
+        {
+            print("Round over: Timer");
+            PhotonNetwork.room.CustomProperties["timesUp"] = false;
             PhotonNetwork.room.CustomProperties["playersAlive"] = ogPlayersAlive;
             PhotonNetwork.LoadLevel(2);
         }

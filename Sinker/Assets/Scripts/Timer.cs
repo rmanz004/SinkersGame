@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 
-public class TimeCounter : MonoBehaviour
+public class Timer : MonoBehaviour
 {
 	public TMP_Text timetext;
 	public float timeval = 0;
@@ -15,7 +15,7 @@ public class TimeCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeval = 30;
+        timeval = 60;
     }
 
     // Update is called once per frame
@@ -30,8 +30,8 @@ public class TimeCounter : MonoBehaviour
         DisplayTime(timeval);
 
         if (timeval == 0) {
-        	Debug.Log("time is zero");
-        	SceneManager.LoadScene("MainMenu");
+            print("Times up!");
+            PhotonNetwork.room.CustomProperties["timesUp"] = true;
         }
     }
 
@@ -44,6 +44,6 @@ public class TimeCounter : MonoBehaviour
     	float sec = Mathf.FloorToInt(displaytime%60);
     	float millisec = displaytime % 1 * 1000;
 
-    	timetext.text = string.Format("{0:00}:{1:00}:{2:000}", min, sec, millisec);
+    	timetext.text = string.Format("{0:00}:{1:00}", min, sec);
     }
 }

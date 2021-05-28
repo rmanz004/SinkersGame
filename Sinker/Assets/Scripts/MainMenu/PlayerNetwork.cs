@@ -37,6 +37,7 @@ public class PlayerNetwork : MonoBehaviour
             playersInGame = 0;
             print("On scene New Map");
             PhotonNetwork.room.CustomProperties["playersAlive"] = 4;
+            PhotonNetwork.room.CustomProperties["timesUp"] = false;
             if (PhotonNetwork.isMasterClient)
             {
                 MasterLoadedGame();
@@ -74,6 +75,7 @@ public class PlayerNetwork : MonoBehaviour
         {
             print("All players active");
             PhotonView.RPC("RPC_CreatePlayer", PhotonTargets.All);
+            PhotonView.RPC("RPC_CreateTimer", PhotonTargets.All);
         }
     }
 
@@ -83,5 +85,10 @@ public class PlayerNetwork : MonoBehaviour
         float randomValue = Random.Range(0f, 70f);
         PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100 + (randomValue * 5), 400), Quaternion.identity, 0);
         print("Player was created");
+    }
+
+    [PunRPC]
+    private void RPC_CreateTimer(){
+        PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "TimerUI"), new Vector2(400, 400), Quaternion.identity, 0);
     }
 }

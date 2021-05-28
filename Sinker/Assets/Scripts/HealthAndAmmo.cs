@@ -42,14 +42,6 @@ public class HealthAndAmmo : MonoBehaviour
             Debug.Log("Health and Ammo error");
         }
     }
-    /*
-    void CalledOnLevelWasLoaded()
-    {
-        GameObject _uiGo = Instantiate(this.HUD);
-        _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReciever);
-        return;
-    }
-    */
     public void incHealth(int num)
     {
         if (num < 0)

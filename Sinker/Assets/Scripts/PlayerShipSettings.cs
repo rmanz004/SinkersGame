@@ -6,15 +6,9 @@ using TMPro;
 
 public class PlayerShipSettings : Photon.MonoBehaviour
 {
-    private PhotonView photonView;
-    private void Awake()
+    private void Start()
     {
-        photonView = GetComponent<PhotonView>();
-    }
-    void Start()
-    {
-        string PlayerUserName = photonView.owner.NickName;
-        this.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text = PlayerUserName;
+        this.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text = photonView.owner.NickName;
         print("Name set");
     }
 }
