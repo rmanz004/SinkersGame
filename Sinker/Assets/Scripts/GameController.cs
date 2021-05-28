@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if ((int)PhotonNetwork.room.CustomProperties["playersAlive"] <= 1)
+        if ((int)PhotonNetwork.room.CustomProperties["playersAlive"] <= 0)
         {
             print("Round over: Kills");
             PhotonNetwork.room.CustomProperties["playersAlive"] = ogPlayersAlive;
