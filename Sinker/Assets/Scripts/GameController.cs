@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
     public GameObject PlayerPrefab;
     bool loaded = false;
     int ogPlayersAlive = 0;
-    int levelIndx = 0;
+    int levelIndx = 1;
     List<string> levels = new List<string>{ "1Map", "2Map", "3Map" };
     private void Start()
     {

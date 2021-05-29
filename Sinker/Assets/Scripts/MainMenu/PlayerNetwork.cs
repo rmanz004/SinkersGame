@@ -31,7 +31,7 @@ public class PlayerNetwork : MonoBehaviour
                 NonMasterLoadedGame();
             }
         }
-        if (scene.name == "NewMap")
+        if (scene.name == "2Map")
         {
             level = 2;
             playersInGame = 0;
