@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerNetwork : MonoBehaviour
@@ -82,8 +83,19 @@ public class PlayerNetwork : MonoBehaviour
     [PunRPC]
     private void RPC_CreatePlayer()
     {
-        float randomValue = Random.Range(0f, 70f);
-        PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100 + (randomValue * 5), 400), Quaternion.identity, 0);
+        if (PhotonNetwork.player.ID == 1)
+        {
+            PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100, 400), Quaternion.identity, 0);
+        } else if (PhotonNetwork.player.ID == 2)
+        {
+            PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(800, 400), Quaternion.identity, 0);
+        } else if (PhotonNetwork.player.ID == 3)
+        {
+            PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100, 100), Quaternion.identity, 0);
+        } else if (PhotonNetwork.player.ID == 4)
+        {
+            PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(860, 100), Quaternion.identity, 0);
+        }
         print("Player was created");
     }
 
