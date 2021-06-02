@@ -30,7 +30,8 @@ public class Bullet : MonoBehaviour
             string newHeader = cannon.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text.Split(':')[0] + ": " + cannon.score.ToString();
             cannon.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text = newHeader;
         }
-        Destroy(gameObject);
+        if (col.gameObject.tag == "Player")
+            Destroy(gameObject);
     }
 
 }

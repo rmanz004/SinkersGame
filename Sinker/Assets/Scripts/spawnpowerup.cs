@@ -17,18 +17,15 @@ public class spawnpowerup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (transform.position.x < screenbounds.x) {
-        // 	  Destroy(this.gameObject);
-        // }
         if(timeval > 0) {
             timeval -= Time.deltaTime;
         } else {
             timeval = 0;
         }
 
-        if (timeval == 0) {
-            Debug.Log("deleting powerup clone");
-            Destroy(this.gameObject);
-        }
+        // if (timeval == 0) {
+        //     Debug.Log("deleting powerup clone");
+        //     Destroy(this.gameObject);
+        // }
     }
 }

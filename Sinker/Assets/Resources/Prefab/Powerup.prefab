@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6520013973444864014}
   - component: {fileID: 6520013973444864017}
   - component: {fileID: 3493596867344675677}
+  - component: {fileID: 5178724984077880260}
   m_Layer: 0
-  m_Name: Powerup 1
-  m_TagString: Untagged
+  m_Name: Powerup
+  m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,3 +140,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340bcbdbda731f743aa0e1ec122c9b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5178724984077880260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6520013973444864013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 6520013973444864014}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  currentMasterID: -1
+  isRuntimeInstantiated: 0

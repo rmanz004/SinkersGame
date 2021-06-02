@@ -1,5 +1,6 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 public class PlayerNetwork : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class PlayerNetwork : MonoBehaviour
     private PhotonView PhotonView;
     private int playersInGame = 0;
     private int level = 3;
+
+    int spawnIndex = 0;
+    private List<Vector2> spawnPoints = new List<Vector2> { new Vector2(50, 400), new Vector2(900, 20), new Vector2(900, 400), new Vector2(50, 20), new Vector2(450, 20), new Vector2(450, 400), new Vector2(50, 200), new Vector2(900, 200) };
     private void Awake()
     {
         Instance = this;
@@ -83,24 +87,14 @@ public class PlayerNetwork : MonoBehaviour
     [PunRPC]
     private void RPC_CreatePlayer()
     {
-        if (PhotonNetwork.player.ID == 1)
-        {
-            PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100, 400), Quaternion.identity, 0);
-        } else if (PhotonNetwork.player.ID == 2)
-        {
-            PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(800, 400), Quaternion.identity, 0);
-        } else if (PhotonNetwork.player.ID == 3)
-        {
-            PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(100, 100), Quaternion.identity, 0);
-        } else if (PhotonNetwork.player.ID == 4)
-        {
-            PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), new Vector2(860, 100), Quaternion.identity, 0);
-        }
+        int randomValue = Random.Range(0, 8);
+        PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), spawnPoints[randomValue], Quaternion.identity, 0);
         print("Player was created");
     }
 
     [PunRPC]
-    private void RPC_CreateTimer(){
-        PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "TimerUI"), new Vector2(400, 400), Quaternion.identity, 0);
+    private void RPC_CreateTimer()
+    {
+        PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "TimerUI"), new Vector2(50, 600), Quaternion.identity, 0);
     }
 }

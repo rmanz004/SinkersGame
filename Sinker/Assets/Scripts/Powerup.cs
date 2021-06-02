@@ -21,19 +21,18 @@ public class Powerup : MonoBehaviour
 
     void GetPowerUp(Collider2D player)
     {
-        speedMod =  player.GetComponent<WASDMovement>();
+        //speedMod =  player.GetComponent<WASDMovement>();
         increase = player.GetComponent<HealthAndAmmo>();
         HUD = player.GetComponent<HUDScript>();
-        speedMod2 = player.GetComponent<WASDMovement>();
+        //speedMod2 = player.GetComponent<WASDMovement>();
 
-        speedMod.moveSpeed *= 1.3f;
-        speedMod2.moveSpeed *= 1.3f;
+        //speedMod.moveSpeed *= 1.3f;
+        //speedMod2.moveSpeed *= 1.3f;
         increase.incHealth(1);
         increase.incAmmo(3);
+    
 
-        Destroy(gameObject);
-
-        
+        Destroy(gameObject);        
     }
 
     

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2663803074426203389}
   m_Layer: 0
   m_Name: Cannonball
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,3 +136,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 70
   rb: {fileID: 2041142357382118518}
+  cannon: {fileID: 0}

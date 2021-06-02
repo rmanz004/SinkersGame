@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3758f8f58fdef43803eb9be1df0608, type: 3}
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
-  AppID: 
+  AppID: 4bd122b1-9415-4ff2-af63-113486a51265
   VoiceAppID: 
   ChatAppID: 
-  HostType: 0
+  HostType: 1
   PreferredRegion: 0
   EnabledRegions: -1
   Protocol: 0
@@ -50,4 +50,5 @@ MonoBehaviour:
   - RPC_ShootBullet
   - RPC_UpdateScore
   - TaggedPlayer
+  - RPC_SpawnPowerup
   DisableAutoOpenWizard: 1

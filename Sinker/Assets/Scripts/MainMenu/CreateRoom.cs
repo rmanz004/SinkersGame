@@ -15,6 +15,7 @@ public class CreateRoom : MonoBehaviour
         roomOptions.IsOpen = true;
         roomOptions.CustomRoomProperties = new ExitGames.Client.Photon.Hashtable();
         roomOptions.CustomRoomProperties.Add("playersAlive", 0);
+        roomOptions.CustomRoomProperties.Add("spawnLocationIndx", 0);
         roomOptions.CustomRoomProperties.Add("timesUp", false);
         if (PhotonNetwork.CreateRoom(RoomName.text, roomOptions, TypedLobby.Default))
         {
