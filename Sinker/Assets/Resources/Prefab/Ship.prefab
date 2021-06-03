@@ -420,9 +420,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initHealth: 3
-  initAmmo: 100
+  initAmmo: 3
   maxHealth: 3
-  maxAmmo: 100
+  maxAmmo: 3
   health: 0
   ammo: 0
   score: 0
