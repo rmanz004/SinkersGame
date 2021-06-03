@@ -33,7 +33,7 @@ public class PlayerNetwork : MonoBehaviour
             }
             else
             {
-                NonMasterLoadedGame(level);
+                NonMasterLoadedGame();
             }
         }
         if (scene.name == "2Map")
@@ -49,7 +49,7 @@ public class PlayerNetwork : MonoBehaviour
             }
             else
             {
-                NonMasterLoadedGame(level);
+                NonMasterLoadedGame();
             }
         }
     }
@@ -60,9 +60,9 @@ public class PlayerNetwork : MonoBehaviour
         PhotonView.RPC("RPC_LoadGameOthers", PhotonTargets.Others, level);
     }
 
-    private void NonMasterLoadedGame(int level)
+    private void NonMasterLoadedGame()
     {
-        PhotonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, level);
+        PhotonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient);
     }
 
     [PunRPC]
