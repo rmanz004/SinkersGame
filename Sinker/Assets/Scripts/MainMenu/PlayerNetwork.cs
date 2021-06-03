@@ -23,26 +23,35 @@ public class PlayerNetwork : MonoBehaviour
 
     private void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
     {
+        if (scene.name == "MainMenu")
+        {
+            print("MainMenu");
+            PhotonNetwork.Disconnect();
+        }
+        if (scene.name == "NewLobby" || scene.name == "MainMenu") return;
         print("On scene");
+
         if (scene.name == "1Map")
         {
             level = 3;
-            if (PhotonNetwork.isMasterClient)
-            {
-                MasterLoadedGame(level);
-            }
-            else
-            {
-                NonMasterLoadedGame();
-            }
+            print("1map");
         }
         if (scene.name == "2Map")
         {
-            level = 2;
-            playersInGame = 0;
-            print("On scene New Map");
-            PhotonNetwork.room.CustomProperties["playersAlive"] = 4;
-            PhotonNetwork.room.CustomProperties["timesUp"] = false;
+            level = 4;
+            print("2map");
+        }
+        if (scene.name == "3Map")
+        {
+            level = 5;
+            print("3map");
+        }
+        if (scene.name == "EndGame")
+        {
+            level = 7;
+        }
+        playersInGame = 0;
+        if (scene.name != "EndGame")
             if (PhotonNetwork.isMasterClient)
             {
                 MasterLoadedGame(level);
@@ -51,7 +60,6 @@ public class PlayerNetwork : MonoBehaviour
             {
                 NonMasterLoadedGame();
             }
-        }
     }
 
     private void MasterLoadedGame(int level)

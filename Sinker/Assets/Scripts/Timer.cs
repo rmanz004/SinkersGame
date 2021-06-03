@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeval = 30;
+        timeval = 60;
     }
 
     // Update is called once per frame
@@ -53,7 +53,6 @@ public class Timer : MonoBehaviour
         if ((int)timeval % 5 == 0 && !spawned)
         {
             spawned = true;
-            print("?");
             float x = Random.Range(50f, 900f);
             float y = Random.Range(20, 400);
             PhotonView.RPC("RPC_SpawnPowerup", PhotonTargets.All, x, y);

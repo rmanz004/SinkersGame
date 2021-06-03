@@ -33,7 +33,6 @@ public class SceneChanger : MonoBehaviour
 
 	public void exitgame() {  
         Debug.Log("exitgame");  
-        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();  
     } 
 }

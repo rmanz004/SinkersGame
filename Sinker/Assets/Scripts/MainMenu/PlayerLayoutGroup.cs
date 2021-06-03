@@ -69,6 +69,7 @@ public class PlayerLayoutGroup : MonoBehaviour
         if (indx != -1)
         {
             Destroy(PlayerListings[indx].gameObject);
+            print("Destroyed");
             PlayerListings.RemoveAt(indx);
         }
     }

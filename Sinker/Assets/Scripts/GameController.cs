@@ -7,18 +7,17 @@ public class GameController : MonoBehaviour
     public GameObject PlayerPrefab;
     bool loaded = false;
     int ogPlayersAlive = 0;
-    int levelIndx = 1;
-    List<string> levels = new List<string> { "1Map", "2Map", "3Map" };
+    List<string> levels = new List<string> { "1Map", "2Map", "3Map", "EndGame" };
     private void Start()
     {
         ogPlayersAlive = ((int)PhotonNetwork.room.CustomProperties["playersAlive"]);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (PhotonNetwork.isMasterClient)
         {
-            if ((int)PhotonNetwork.room.CustomProperties["playersAlive"] <= 0)
+            if ((int)PhotonNetwork.room.CustomProperties["playersAlive"] <= 1)
             {
                 print("Round over: Kills");
                 loadLevel();
@@ -34,8 +33,11 @@ public class GameController : MonoBehaviour
     {
         PhotonNetwork.room.CustomProperties["timesUp"] = false;
         PhotonNetwork.room.CustomProperties["playersAlive"] = ogPlayersAlive;
-        PhotonNetwork.room.CustomProperties["spawnLocationIndx"] = 0;
+        int levelIndx = (int)PhotonNetwork.room.CustomProperties["levelIndx"];
+        if(levelIndx >= 4) return;
         PhotonNetwork.LoadLevel(levels[levelIndx]);
         levelIndx++;
+        PhotonNetwork.room.CustomProperties["levelIndx"] = levelIndx;
+        print("Level Indx: " + levelIndx);
     }
 }

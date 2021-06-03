@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
-public class MenuController : MonoBehaviour
+public class MenuController : Photon.MonoBehaviour
 {
     [SerializeField] private string VersionName = "0.1";
     [SerializeField] private GameObject UsernameMenu;
@@ -13,35 +14,54 @@ public class MenuController : MonoBehaviour
 
     [SerializeField] private GameObject StartButton;
 
-    private void Awake(){
-        PhotonNetwork.ConnectUsingSettings(VersionName);
+    private void Awake()
+    {
+        if (!PhotonNetwork.connected)
+        {
+            print("Connect");
+            PhotonNetwork.ConnectUsingSettings(VersionName);
+        }
+        //StartCoroutine(Connect());
     }
 
-    private void Start(){
+    // IEnumerator Connect()
+    // {
+    //     PhotonNetwork.ConnectUsingSettings(VersionName);
+    //     return;
+    // }
+
+    private void Start()
+    {
         UsernameMenu.SetActive(true);
     }
 
-    private void OnConnectedToMaster(){
+    private void OnConnectedToMaster()
+    {
         PhotonNetwork.playerName = PlayerNetwork.Instance.PlayerName;
         PhotonNetwork.JoinLobby(TypedLobby.Default);
         Debug.Log("Connected");
     }
 
-    public void ChangeUserNameInput(){
-        if(UsernameInput.text.Trim().Length >= 3){
+    public void ChangeUserNameInput()
+    {
+        if (UsernameInput.text.Trim().Length >= 3)
+        {
             StartButton.SetActive(true);
         }
-        else{
+        else
+        {
             StartButton.SetActive(false);
         }
     }
 
-    public void SetUserName(){
+    public void SetUserName()
+    {
         UsernameMenu.SetActive(false);
         PhotonNetwork.playerName = UsernameInput.text;
     }
 
-    public void CreateGame(){
+    public void CreateGame()
+    {
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 4;
         roomOptions.IsVisible = true;
@@ -49,7 +69,8 @@ public class MenuController : MonoBehaviour
         PhotonNetwork.CreateRoom(CreateGameInput.text, roomOptions, null);
     }
 
-    public void JoinGame(){
+    public void JoinGame()
+    {
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 4;
         roomOptions.IsVisible = true;
@@ -58,7 +79,8 @@ public class MenuController : MonoBehaviour
         PhotonNetwork.JoinOrCreateRoom(JoinGameInput.text, roomOptions, TypedLobby.Default);
     }
 
-    private void OnJoinedRoom(){
+    private void OnJoinedRoom()
+    {
         //PhotonNetwork.LoadLevel("NewMap");
     }
 
