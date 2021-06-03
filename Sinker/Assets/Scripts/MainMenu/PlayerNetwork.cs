@@ -66,9 +66,9 @@ public class PlayerNetwork : MonoBehaviour
     }
 
     [PunRPC]
-    private void RPC_LoadGameOthers()
+    private void RPC_LoadGameOthers(int lvl)
     {
-        PhotonNetwork.LoadLevel(level);
+        PhotonNetwork.LoadLevel(lvl);
     }
 
     [PunRPC]
