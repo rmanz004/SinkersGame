@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
     private void Awake()
     {
         photonView = GetComponent<PhotonView>();
+        score = (int)PhotonNetwork.player.CustomProperties["Score"];
     }
     // Update is called once per frame
     void Update() //Btw, I recommend not checking for this every frame but firing only when an input is decected.

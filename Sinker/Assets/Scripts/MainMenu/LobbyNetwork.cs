@@ -18,8 +18,11 @@ public class LobbyNetwork : MonoBehaviour
         PhotonNetwork.JoinLobby(TypedLobby.Default);
     }
 
-    private void OnJoinedLobby(){
+    private void OnJoinedLobby()
+    {
         print("Connected to lobby");
+        ExitGames.Client.Photon.Hashtable PlayerCustomProps = new ExitGames.Client.Photon.Hashtable();
+        PhotonNetwork.player.CustomProperties.Add("Score", 0);
         MainCanvasManager.Instance.UsernameCanvas.transform.SetAsLastSibling();
     }
 }

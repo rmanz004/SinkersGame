@@ -40,7 +40,8 @@ public class Timer : MonoBehaviour
         if (timeval == 0)
         {
             print("Times up!");
-            PhotonNetwork.room.CustomProperties["timesUp"] = true;
+            bool timesUp = true;
+            PhotonNetwork.room.CustomProperties["timesUp"] = timesUp;
         }
 
         if (PhotonNetwork.isMasterClient)
@@ -49,12 +50,15 @@ public class Timer : MonoBehaviour
 
     private void spawnPowerup()
     {
-        if ((int)timeval % 3 == 0 && !spawned)
+        if ((int)timeval % 5 == 0 && !spawned)
         {
-            PhotonView.RPC("RPC_SpawnPowerup", PhotonTargets.All);
             spawned = true;
+            print("?");
+            float x = Random.Range(50f, 900f);
+            float y = Random.Range(20, 400);
+            PhotonView.RPC("RPC_SpawnPowerup", PhotonTargets.All, x, y);
         }
-        else if ((int)timeval % 3 != 0)
+        else if ((int)timeval % 5 != 0)
         {
             spawned = false;
         }
@@ -76,10 +80,8 @@ public class Timer : MonoBehaviour
     }
 
     [PunRPC]
-    private void RPC_SpawnPowerup()
+    private void RPC_SpawnPowerup(float x, float y)
     {
-        float x = Random.Range(50f, 900f);
-        float y = Random.Range(20, 400);
         PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Powerup"), new Vector2(x, y), Quaternion.identity, 0);
         print("Spawn powerup");
     }

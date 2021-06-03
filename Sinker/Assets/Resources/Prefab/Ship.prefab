@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5525e701122ae034cae1b1d4c824f13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 200
+  moveSpeed: 70
   rb: {fileID: 8108359885449518728}
   PivotPoint: {fileID: 3689571722448270818}
 --- !u!222 &4744982992712688815

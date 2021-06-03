@@ -25,12 +25,16 @@ public class Bullet : MonoBehaviour
             HealthAndAmmo temp;
             temp = col.gameObject.GetComponent<HealthAndAmmo>();
             temp.decHealth(1);
+
             //Update score
             cannon.score += 10;
-            string newHeader = cannon.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text.Split(':')[0] + ": " + cannon.score.ToString();
+
+            PhotonNetwork.player.CustomProperties["Score"] = cannon.score;
+
+            string newHeader = cannon.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text.Split(':')[0] + ": " +  PhotonNetwork.player.CustomProperties["Score"].ToString();
             cannon.transform.Find("Text (TMP)").GetComponent<TextMeshPro>().text = newHeader;
         }
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag != "Powerup" && col.gameObject.tag != "Bullet")
             Destroy(gameObject);
     }
 

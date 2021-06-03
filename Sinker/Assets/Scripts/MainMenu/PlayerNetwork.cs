@@ -29,11 +29,11 @@ public class PlayerNetwork : MonoBehaviour
             level = 3;
             if (PhotonNetwork.isMasterClient)
             {
-                MasterLoadedGame();
+                MasterLoadedGame(level);
             }
             else
             {
-                NonMasterLoadedGame();
+                NonMasterLoadedGame(level);
             }
         }
         if (scene.name == "2Map")
@@ -45,24 +45,24 @@ public class PlayerNetwork : MonoBehaviour
             PhotonNetwork.room.CustomProperties["timesUp"] = false;
             if (PhotonNetwork.isMasterClient)
             {
-                MasterLoadedGame();
+                MasterLoadedGame(level);
             }
             else
             {
-                NonMasterLoadedGame();
+                NonMasterLoadedGame(level);
             }
         }
     }
 
-    private void MasterLoadedGame()
+    private void MasterLoadedGame(int level)
     {
-        PhotonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient);
-        PhotonView.RPC("RPC_LoadGameOthers", PhotonTargets.Others);
+        PhotonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, level);
+        PhotonView.RPC("RPC_LoadGameOthers", PhotonTargets.Others, level);
     }
 
-    private void NonMasterLoadedGame()
+    private void NonMasterLoadedGame(int level)
     {
-        PhotonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient);
+        PhotonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, level);
     }
 
     [PunRPC]
@@ -87,6 +87,7 @@ public class PlayerNetwork : MonoBehaviour
     [PunRPC]
     private void RPC_CreatePlayer()
     {
+        //PhotonNetwork.player.ID == 1
         int randomValue = Random.Range(0, 8);
         PhotonNetwork.Instantiate(System.IO.Path.Combine("Prefab", "Ship"), spawnPoints[randomValue], Quaternion.identity, 0);
         print("Player was created");
