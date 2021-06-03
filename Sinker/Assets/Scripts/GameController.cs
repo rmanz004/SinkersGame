@@ -16,15 +16,18 @@ public class GameController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if ((int)PhotonNetwork.room.CustomProperties["playersAlive"] <= 0)
+        if (PhotonNetwork.isMasterClient)
         {
-            print("Round over: Kills");
-            loadLevel();
-        }
-        if ((bool)PhotonNetwork.room.CustomProperties["timesUp"])
-        {
-            print("Round over: Timer");
-            loadLevel();
+            if ((int)PhotonNetwork.room.CustomProperties["playersAlive"] <= 0)
+            {
+                print("Round over: Kills");
+                loadLevel();
+            }
+            if ((bool)PhotonNetwork.room.CustomProperties["timesUp"])
+            {
+                print("Round over: Timer");
+                loadLevel();
+            }
         }
     }
     private void loadLevel()
